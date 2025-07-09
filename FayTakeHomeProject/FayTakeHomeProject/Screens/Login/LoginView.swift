@@ -66,6 +66,7 @@ struct LoginView: View {
                 }
                 .padding(.vertical, 15)
                 .padding(.horizontal, 25)
+                .offset(y: -50)
             }
             .onTapGesture {
                 UIApplication.shared.endEditing()
