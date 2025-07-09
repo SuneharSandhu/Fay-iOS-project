@@ -11,7 +11,10 @@ struct AppointmentsListView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     ForEach(Array(viewModel.filteredAppointments.enumerated()), id: \.element.id) { index, appointment in
-                        AppointmentRowView(appointment: appointment, isFirstUpcoming: index == 0 && viewModel.selectedTab == .upcoming)
+                        AppointmentRowView(
+                            appointment: appointment,
+                            isFirstUpcoming: index == 0 && viewModel.selectedTab == .upcoming
+                        )
                     }
                     .padding(.horizontal, 24)
                 }

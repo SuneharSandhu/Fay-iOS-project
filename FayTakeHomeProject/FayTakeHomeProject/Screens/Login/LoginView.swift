@@ -67,6 +67,9 @@ struct LoginView: View {
                 .padding(.vertical, 15)
                 .padding(.horizontal, 25)
             }
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
             .overlay(alignment: .bottom) {
                 Image(systemName: "sun.horizon.fill")
                     .resizable()
@@ -79,7 +82,7 @@ struct LoginView: View {
                         y: showOverlay ? 130 : UIScreen.main.bounds.height
                     )
                     .rotationEffect(.degrees(-30))
-                    .animation(.smooth(duration: 2.0, extraBounce: 0.2), value: showOverlay)
+                    .animation(.smooth(duration: 1.5), value: showOverlay)
                     .onAppear {
                         showOverlay = true
                     }
