@@ -6,7 +6,7 @@ struct AppointmentRowView: View {
     let isFirstUpcoming: Bool
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .top, spacing: 12) {
                 VStack(spacing: 0) {
                     Text(appointment.startDate.formatted(.dateTime.month(.abbreviated)))

@@ -54,6 +54,7 @@ struct LoginView: View {
                         
                         FayGradientButton(title: "Log in", isFullWidth: true) {
                             authManager.login(username: username, password: password)
+                            UIApplication.shared.endEditing()
                         }
                         .disableWithOpacity(username.isEmpty || password.isEmpty)
                         
